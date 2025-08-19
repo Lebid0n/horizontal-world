@@ -1,0 +1,27 @@
+{
+  "name": "horizontal-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "check:frontend": "cd frontend && npm run lint && npm run frmt:check",
+    "check:backend": "cd backend && npm run lint && npm run format:check",
+    "check:all": "npm run check:frontend && npm run check:backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lebid0n/Horizontal-World.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Lebid0n/Horizontal-World/issues"
+  },
+  "homepage": "https://github.com/Lebid0n/Horizontal-World#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
