@@ -7,6 +7,7 @@ app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello from Express + TypeScript 🚀");
+  i ate a chicken today
 });
 
 app.listen(PORT, () => {
