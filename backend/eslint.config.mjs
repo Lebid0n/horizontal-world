@@ -5,7 +5,7 @@ export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    ignores: ["dist/**", "eslint.config.cjs"],
+    ignores: ["dist/**"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
