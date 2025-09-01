@@ -15,11 +15,11 @@ export class UserController {
 
   async createUser(req: Request, res: Response) {
     try {
-      const { name, email } = req.body;
+      const { username, email } = req.body;
       const userRepository = AppDataSource.getRepository(User);
 
       const user = new User();
-      user.name = name;
+      user.username = username;
       user.email = email;
 
       const savedUser = await userRepository.save(user);
