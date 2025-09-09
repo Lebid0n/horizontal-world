@@ -1,16 +1,20 @@
 @import 'tailwindcss';
 
 :root {
-  --color-orange-primary: rgb(255, 102, 0);
-  /* Яркий оранжевый */
-  --color-orange-secondary: rgb(255, 140, 0);
-  /* Золотистый оранжевый */
-  --color-black-primary: rgb(23, 23, 23);
-  /* Глубокий черный */
-  --color-black-secondary: rgb(40, 40, 40);
-  /* Темно-серый */
-  --color-accent: rgb(255, 165, 0);
-  /* Акцентный оранжевый */
+  /* Акцентные цвета (оранжевые) - одинаковые для обеих тем */
+  --color-primary: rgb(255, 102, 0);
+  --color-primary-hover: rgb(230, 92, 0);
+  --color-accent: rgb(255, 140, 0);
+
+  /* Светлая тема по умолчанию */
+  --color-bg-primary: rgb(255, 255, 255);
+  --color-bg-secondary: rgb(248, 248, 248);
+  --color-bg-card: rgb(252, 250, 247);
+
+  --color-text-primary: rgb(23, 23, 23);
+  --color-text-secondary: rgb(100, 100, 100);
+
+  --color-border: rgb(230, 230, 230);
 }
 
 /* second option */
@@ -27,14 +31,28 @@
 /* --color-black-secondary: rgb(33, 33, 33);     Темный уголь */
 /* --color-accent: rgb(255, 50, 0);              Огненный акцент */
 
-@theme {
-  --color-orange-primary: var-(--color-orange-primary);
-  --color-orange-secondary: var-(--color-orange-secondary);
-  --color-black-primary: var-(--color-black-primary);
-  --color-black-secondary: var-(--color-black-secondary);
-  --color-accent: var-(--color-accent);
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-accent: var(--color-accent);
+
+  --color-bg-primary: var(--color-bg-primary);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-bg-card: var(--color-bg-card);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+
+  --color-border: var(--color-border);
 }
 
-/* dark theme support */
-@html.dark {
+html.dark {
+  --color-bg-primary: rgb(23, 23, 23);
+  --color-bg-secondary: rgb(40, 40, 40);
+  --color-bg-card: rgb(28, 28, 30);
+
+  --color-text-primary: rgb(255, 255, 255);
+  --color-text-secondary: rgb(200, 200, 200);
+
+  --color-border: rgb(60, 60, 60);
 }
