@@ -1,1 +1,40 @@
 @import 'tailwindcss';
+
+:root {
+  --color-orange-primary: rgb(255, 102, 0);
+  /* Яркий оранжевый */
+  --color-orange-secondary: rgb(255, 140, 0);
+  /* Золотистый оранжевый */
+  --color-black-primary: rgb(23, 23, 23);
+  /* Глубокий черный */
+  --color-black-secondary: rgb(40, 40, 40);
+  /* Темно-серый */
+  --color-accent: rgb(255, 165, 0);
+  /* Акцентный оранжевый */
+}
+
+/* second option */
+/* --color-orange-primary: rgb(237, 137, 54);    Приглушенный оранжевый */
+/* --color-orange-secondary: rgb(255, 158, 68);  Светлый оранжевый */
+/* --color-black-primary: rgb(28, 28, 30);       Угольный черный */
+/* --color-black-secondary: rgb(44, 44, 46);     Темный графит */
+/* --color-accent: rgb(255, 111, 0);             Яркий акцент */
+
+/* third option */
+/* --color-orange-primary: rgb(255, 69, 0);      Красно-оранжевый */
+/* --color-orange-secondary: rgb(255, 110, 0);   Яркий оранжевый */
+/* --color-black-primary: rgb(16, 16, 16);       Абсолютный черный */
+/* --color-black-secondary: rgb(33, 33, 33);     Темный уголь */
+/* --color-accent: rgb(255, 50, 0);              Огненный акцент */
+
+@theme {
+  --color-orange-primary: var-(--color-orange-primary);
+  --color-orange-secondary: var-(--color-orange-secondary);
+  --color-black-primary: var-(--color-black-primary);
+  --color-black-secondary: var-(--color-black-secondary);
+  --color-accent: var-(--color-accent);
+}
+
+/* dark theme support */
+@html.dark {
+}
