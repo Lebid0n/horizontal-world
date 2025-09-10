@@ -1,0 +1,17 @@
+[
+  {
+    "progression_slug": "tuck-front-lever",
+    "target_slug": "front-lever",
+    "progression_order": 1
+  },
+  {
+    "progression_slug": "advanced-tuck-front-lever",
+    "target_slug": "front-lever",
+    "progression_order": 2
+  },
+  {
+    "progression_slug": "pull-up",
+    "target_slug": "muscle-up",
+    "progression_order": 1
+  }
+]

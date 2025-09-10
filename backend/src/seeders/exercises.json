@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Front Lever",
+    "slug": "front-lever",
+    "description": "A foundational straight-arm strength hold where the body is parallel to the ground.",
+    "difficulty": "expert",
+    "videoUrl": "https://youtu.be/example1",
+    "imageUrl": "/images/front-lever.jpg"
+  },
+  {
+    "name": "Tuck Front Lever",
+    "slug": "tuck-front-lever",
+    "description": "A beginner progression for the front lever with knees tucked to the chest.",
+    "difficulty": "intermediate",
+    "videoUrl": "https://youtu.be/example2",
+    "imageUrl": "/images/tuck-front-lever.jpg"
+  },
+  {
+    "name": "Advanced Tuck Front Lever",
+    "slug": "advanced-tuck-front-lever",
+    "description": "A progression where the torso is more parallel to the ground than the tuck hold.",
+    "difficulty": "intermediate",
+    "videoUrl": "https://youtu.be/example3",
+    "imageUrl": "/images/advanced-tuck-front-lever.jpg"
+  },
+  {
+    "name": "Pull-up",
+    "slug": "pull-up",
+    "description": "The fundamental vertical pulling exercise.",
+    "difficulty": "beginner",
+    "videoUrl": "https://youtu.be/example4",
+    "imageUrl": "/images/pull-up.jpg"
+  },
+  {
+    "name": "Muscle-up",
+    "slug": "muscle-up",
+    "description": "An advanced transition from a pull-up to a dip.",
+    "difficulty": "advanced",
+    "videoUrl": "https://youtu.be/example5",
+    "imageUrl": "/images/muscle-up.jpg"
+  }
+]

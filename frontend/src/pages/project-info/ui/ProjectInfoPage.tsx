@@ -1,3 +1,3 @@
 export default function ProjectInfoPage() {
-  return <></>
+  return <div>Project Info Page</div>
 }
