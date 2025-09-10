@@ -10,7 +10,7 @@ export const AppDataSource = new DataSource({
   username: process.env.DB_USERNAME || "test",
   password: process.env.DB_PASSWORD || "test",
   database: process.env.DB_DATABASE || "test",
-  synchronize: process.env.NODE_ENV === "production" ? true : false,
+  synchronize: process.env.NODE_ENV === "development", // true only in development
   logging: process.env.NODE_ENV === "development" ? true : false,
   entities: [User, Exercise, Progression],
   migrations: [],

@@ -4,10 +4,7 @@ import { Progression } from "./entities/Progression";
 import exercisesData from "./seeders/exercises.json";
 import progressionsData from "./seeders/progressions.json";
 
-const seed = async () => {
-  await AppDataSource.initialize();
-  console.log("Data Source has been initialized!");
-
+export const seed = async () => {
   // Get repositories for our entities
   const exerciseRepository = AppDataSource.getRepository(Exercise);
   const progressionRepository = AppDataSource.getRepository(Progression);
@@ -17,7 +14,7 @@ const seed = async () => {
 
     // --- SEED EXERCISES FIRST ---
     console.log("Seeding exercises...");
-    const exerciseEntities = exercisesData.map((data: Exercise) => {
+    const exerciseEntities = exercisesData.map((data) => {
       const exercise = new Exercise();
       exercise.name = data.name;
       exercise.slug = data.slug;
@@ -28,6 +25,7 @@ const seed = async () => {
       return exercise;
     });
 
+    console.log(exerciseEntities);
     await exerciseRepository.save(exerciseEntities);
     console.log("Exercises have been seeded!");
 
@@ -69,5 +67,3 @@ const seed = async () => {
     console.log("Connection closed.");
   }
 };
-
-seed().catch((error) => console.log("Error during seeding:", error));

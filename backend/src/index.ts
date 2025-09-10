@@ -3,6 +3,7 @@ import "reflect-metadata";
 import express from "express";
 import { AppDataSource } from "./data-source";
 import routes from "./routes";
+import { seed } from "./seeder";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,6 +20,8 @@ async function startServer() {
   try {
     await AppDataSource.initialize();
     console.log("Database connected successfully!");
+
+    await seed();
 
     app.listen(PORT, () => {
       console.log(`Server running on http://localhost:${PORT}`);

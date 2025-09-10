@@ -1,7 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Progression } from "./Progression";
 
-@Entity()
+@Entity("exercises")
 export class Exercise {
   @PrimaryGeneratedColumn()
   id: number;
@@ -16,7 +16,7 @@ export class Exercise {
   description: string;
 
   @Column()
-  difficulty: "beginner" | "intermediate" | "advanced" | "expert";
+  difficulty: string;
 
   @Column({ nullable: true })
   videoUrl: string;

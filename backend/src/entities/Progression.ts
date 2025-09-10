@@ -7,7 +7,7 @@ import {
 } from "typeorm";
 import { Exercise } from "./Exercise";
 
-@Entity()
+@Entity("progressions")
 export class Progression {
   @PrimaryGeneratedColumn()
   id: number;
