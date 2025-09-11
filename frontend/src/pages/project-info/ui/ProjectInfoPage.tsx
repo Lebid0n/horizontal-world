@@ -1,3 +1,10 @@
+import Header from '@/widgets/header/ui/Header'
+
 export default function ProjectInfoPage() {
-  return <div>Project Info Page</div>
+  return (
+    <>
+      <Header />
+      <div></div>
+    </>
+  )
 }
