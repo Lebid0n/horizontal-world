@@ -5,7 +5,7 @@ export default function Layout() {
   return (
     <>
       {/* header is here obviously (insert your own) */}
-        <Header />
+      <Header />
       {/* with the outlet we can render the content of the current subroute
        * so technically the only thing that rerenders is the content in the outlet
        * and the header with the footer stay the same

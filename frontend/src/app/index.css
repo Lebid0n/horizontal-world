@@ -7,8 +7,8 @@
   --color-primary-200: rgb(255, 213, 170);
   --color-primary-300: rgb(255, 180, 120);
   --color-primary-400: rgb(255, 140, 70);
-  --color-primary-500: rgb(255, 102, 0);    /* ваш основной */
-  --color-primary-600: rgb(230, 92, 0);     /* ваш hover */
+  --color-primary-500: rgb(255, 102, 0); /* ваш основной */
+  --color-primary-600: rgb(230, 92, 0); /* ваш hover */
   --color-primary-700: rgb(200, 80, 0);
   --color-primary-800: rgb(170, 68, 0);
   --color-primary-900: rgb(140, 56, 0);
@@ -18,7 +18,7 @@
   --color-accent-200: rgb(255, 210, 180);
   --color-accent-300: rgb(255, 180, 140);
   --color-accent-400: rgb(255, 150, 100);
-  --color-accent-500: rgb(255, 140, 0);     /* ваш акцент */
+  --color-accent-500: rgb(255, 140, 0); /* ваш акцент */
   --color-accent-600: rgb(230, 126, 0);
   --color-accent-700: rgb(200, 110, 0);
   --color-accent-800: rgb(170, 94, 0);
@@ -31,10 +31,10 @@
   --color-gray-300: rgb(212, 212, 212);
   --color-gray-400: rgb(180, 180, 180);
   --color-gray-500: rgb(140, 140, 140);
-  --color-gray-600: rgb(100, 100, 100);     /* ваш text-secondary */
+  --color-gray-600: rgb(100, 100, 100); /* ваш text-secondary */
   --color-gray-700: rgb(70, 70, 70);
   --color-gray-800: rgb(45, 45, 45);
-  --color-gray-900: rgb(23, 23, 23);        /* ваш text-primary */
+  --color-gray-900: rgb(23, 23, 23); /* ваш text-primary */
 
   /* Фоны */
   --color-bg-primary: rgb(255, 255, 255);
@@ -51,7 +51,7 @@
 
   /* Границы */
   --color-border-light: rgb(240, 240, 240);
-  --color-border: rgb(230, 230, 230);       /* ваш border */
+  --color-border: rgb(230, 230, 230); /* ваш border */
   --color-border-dark: rgb(210, 210, 210);
 
   /* Состояния */

@@ -1,7 +1,7 @@
-import HeaderSearchBar from "./HeaderSearchBar"
+import HeaderSearchBar from './HeaderSearchBar'
 
 export default function Header() {
-  return(
+  return (
     <header className="w-[100vw] h-[15vh] flex bg-bg-secondary">
       <div className="w-[20vw] h-full flex justify-center items-center p-4 bg-bg-tertiary">
         <h1 className="text-3xl font-bold select-none">Horizonts World</h1>
