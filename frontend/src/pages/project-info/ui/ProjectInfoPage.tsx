@@ -1,3 +1,10 @@
+import ProjectInfo from './ProjectInfo'
+
 export default function ProjectInfoPage() {
-  return <div>Project Info Page</div>
+  return (
+    <>
+      <ProjectInfo />
+      <div></div>
+    </>
+  )
 }

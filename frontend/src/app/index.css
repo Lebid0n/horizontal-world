@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+.poppins {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 :root {
   /* Акцентные цвета (оранжевая палитра) */
   --color-primary-50: rgb(255, 247, 237);

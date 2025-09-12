@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import type { ChangeEvent, KeyboardEvent, MouseEvent } from 'react'
 import { CiSearch } from 'react-icons/ci'
 import { RxCross1 } from 'react-icons/rx'
 
 export default function HeaderSearchBar() {
   const [searchBarText, setSearchBarText] = useState('')
 
-  const handleSearch = () => {
+  const handleSearch = (e: MouseEvent<HTMLButtonElement>) => {
     if (searchBarText.trim()) {
       console.log('Searching for:', searchBarText)
     }
@@ -41,7 +42,7 @@ export default function HeaderSearchBar() {
         type="text"
         value={searchBarText}
         onChange={handleInputChange}
-        onKeyPress={handleKeyPress}
+        onKeyDown={handleKeyPress}
         placeholder="Новые горизонты?"
         className="w-[70%] h-[45%] p-4 bg-accent-200 text-text-primary placeholder-text-secondary transition-[0.5s] hover:bg-accent-300 focus:bg-accent-400 outline-0"
       />
