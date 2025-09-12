@@ -7,3 +7,5 @@ export interface Exercise {
   videoUrl: string
   imageUrl: string
 }
+
+export type ExerciseCardType = 'card' | 'modal' | 'page'

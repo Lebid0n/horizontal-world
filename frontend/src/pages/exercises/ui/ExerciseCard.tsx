@@ -1,9 +1,9 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import type { Exercise } from '../model/types'
+import type { ExerciseCardType, Exercise } from '../model/types'
 
 interface Props {
   exercise: Exercise
-  type: 'card' | 'modal' | 'page'
+  type: ExerciseCardType
 }
 
 export default function ExerciseCard({ exercise, type }: Props) {
