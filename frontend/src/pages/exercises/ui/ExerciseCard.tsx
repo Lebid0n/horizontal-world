@@ -3,15 +3,15 @@ import type { Exercise } from '../model/types'
 
 interface Props {
   exercise: Exercise
-  modal: boolean
+  type: 'card' | 'modal' | 'page'
 }
 
-export default function ExerciseCard({ exercise, modal }: Props) {
+export default function ExerciseCard({ exercise, type }: Props) {
   const navigate = useNavigate()
   const location = useLocation()
 
   const handleClick = () => {
-    if (modal) return
+    if (type === 'modal') return
     navigate(`/exercises/${exercise.slug}`, { state: { location, exercise: exercise } })
   }
 

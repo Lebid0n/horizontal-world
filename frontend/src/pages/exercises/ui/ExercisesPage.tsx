@@ -3,7 +3,7 @@ import ExerciseCard from './ExerciseCard'
 
 export default function ExercisesPage() {
   const exercises = fallbackExercises.map((exercise, idx) => {
-    return <ExerciseCard key={idx} exercise={exercise} modal={false} />
+    return <ExerciseCard key={idx} exercise={exercise} type={'card'} />
   })
 
   return (

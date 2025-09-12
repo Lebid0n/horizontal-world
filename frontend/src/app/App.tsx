@@ -11,8 +11,6 @@ export default function App() {
   const previousLocation = location.state?.location
   const exercise = location.state?.exercise
 
-  console.log(previousLocation)
-
   return (
     <>
       <Routes location={previousLocation || location}>
