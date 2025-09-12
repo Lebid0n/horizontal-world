@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 export default function useClickOutside(
-  ref: React.RefObject<HTMLElement | null>,
+  refs: React.RefObject<HTMLElement | null>[],
   callback: () => void,
   disabled: boolean = false
 ) {
@@ -9,14 +9,14 @@ export default function useClickOutside(
     if (disabled) return
 
     const handleClick = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        callback()
-      }
+      const isInside = refs.some((ref) => ref.current?.contains(e.target as Node))
+
+      if (!isInside) callback()
     }
     document.addEventListener('click', handleClick)
 
     return () => {
       document.removeEventListener('click', handleClick)
     }
-  }, [ref, callback, disabled])
+  }, [refs, callback, disabled])
 }

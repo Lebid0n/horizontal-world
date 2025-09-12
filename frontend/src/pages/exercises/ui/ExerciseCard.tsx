@@ -20,7 +20,7 @@ export default function ExerciseCard({ exercise, type }: Props) {
   }
 
   useClickOutside(
-    ref,
+    [ref],
     () => {
       navigate(-1)
     },
