@@ -6,7 +6,6 @@ import UserProfilePage from '@/pages/user-profile/ui/UserProfilePage'
 import ExerciseModal from '@/pages/exercises/ui/ExerciseModal'
 import ExercisePage from '@/pages/exercises/ui/ExercisePage'
 
-
 export default function App() {
   const location = useLocation()
   const previousLocation = location.state?.location

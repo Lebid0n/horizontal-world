@@ -1,12 +1,11 @@
 import { useState } from 'react'
-import type { ChangeEvent, KeyboardEvent, MouseEvent } from 'react'
 import { CiSearch } from 'react-icons/ci'
 import { RxCross1 } from 'react-icons/rx'
 
 export default function HeaderSearchBar() {
   const [searchBarText, setSearchBarText] = useState('')
 
-  const handleSearch = (e: MouseEvent<HTMLButtonElement>) => {
+  const handleSearch = () => {
     if (searchBarText.trim()) {
       console.log('Searching for:', searchBarText)
     }

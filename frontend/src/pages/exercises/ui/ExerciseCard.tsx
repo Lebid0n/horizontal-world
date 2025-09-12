@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import type { ExerciseCardType, Exercise } from '../model/types'
 import clsx from 'clsx'
+import { useRef } from 'react'
+import useClickOutside from '@/shared/lib/hooks/useClickOutside'
 
 interface Props {
   exercise: Exercise
@@ -10,11 +12,20 @@ interface Props {
 export default function ExerciseCard({ exercise, type }: Props) {
   const navigate = useNavigate()
   const location = useLocation()
+  const ref = useRef<HTMLElement>(null)
 
   const handleClick = () => {
     if (type === 'modal' || type === 'page') return
     navigate(`/exercises/${exercise.slug}`, { state: { location, exercise: exercise } })
   }
+
+  useClickOutside(
+    ref,
+    () => {
+      navigate(-1)
+    },
+    type !== 'modal'
+  )
 
   return (
     <article
@@ -27,6 +38,7 @@ export default function ExerciseCard({ exercise, type }: Props) {
         }
       )}
       onClick={handleClick}
+      ref={ref}
     >
       <h2 className="text-xl font-bold">{exercise.name}</h2>
       <img src={exercise.imageUrl} alt={exercise.name} />
