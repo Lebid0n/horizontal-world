@@ -9,6 +9,7 @@ export default function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<ProjectInfoPage />} />
         <Route path="/exercises" element={<Exercises />} />
+        <Route path="/profile/:id" element={<Profile />} />
       </Route>
     </Routes>
   )
