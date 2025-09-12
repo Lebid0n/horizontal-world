@@ -1,4 +1,4 @@
-export default function HomePage() {
+export default function Exercises() {
   return (
     <div className="flex justify-center h-screen w-full mt-2">
       <div className="flex flex-col w-full lg:w-4/5 border-t border-t-accent">
