@@ -1,6 +1,6 @@
 import type { Exercise } from '../model/types'
 
-export const fallbackExercises: Exercise[] = [
+const fallbackExercises: Exercise[] = [
   {
     id: 1,
     name: 'Push-up',
@@ -29,3 +29,5 @@ export const fallbackExercises: Exercise[] = [
     videoUrl: 'https://www.youtube.com/watch?v=4-0-o0a1-8g',
   },
 ]
+
+export default fallbackExercises

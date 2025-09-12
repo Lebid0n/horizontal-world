@@ -1,8 +1,14 @@
+import fallbackExercises from '../lib/fallback-exercises'
+import ExerciseCard from './ExerciseCard'
+
 export default function ExercisesPage() {
+  const exercises = fallbackExercises.map((exercise, idx) => {
+    return <ExerciseCard key={idx} exercise={exercise} />
+  })
+
   return (
-    <div className="flex flex-col w-full lg:w-4/5 border-t border-t-accent">
-      <h1 className="text-3xl font-bold">Horizontal World</h1>
-      <div></div>
+    <div className="flex flex-col w-full lg:w-4/5 mt-2">
+      <div className="flex flex-wrap gap-2">{exercises}</div>
     </div>
   )
 }
