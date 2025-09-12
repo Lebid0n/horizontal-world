@@ -25,7 +25,6 @@ export const seed = async () => {
       return exercise;
     });
 
-    console.log(exerciseEntities);
     await exerciseRepository.save(exerciseEntities);
     console.log("Exercises have been seeded!");
 

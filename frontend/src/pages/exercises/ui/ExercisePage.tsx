@@ -11,11 +11,9 @@ export default function ExercisePage() {
     return <div>Exercise not found</div>
   }
 
-  console.log('it rendered!')
-
   return (
     <div className="flex flex-col w-full lg:w-4/5 mt-2">
-      <ExerciseCard exercise={exercise} modal={false} />
+      <ExerciseCard exercise={exercise} type={'page'} />
     </div>
   )
 }
