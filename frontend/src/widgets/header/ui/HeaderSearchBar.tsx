@@ -5,7 +5,7 @@ import { RxCross1 } from 'react-icons/rx'
 import { useMediaQuery } from 'react-responsive'
 
 export default function HeaderSearchBar() {
-  const isDesktop = useMediaQuery({minWidth: 1024})
+  const isDesktop = useMediaQuery({ minWidth: 1024 })
   const [searchBarText, setSearchBarText] = useState('')
 
   const handleSearch = (e: MouseEvent<HTMLButtonElement>) => {
@@ -48,7 +48,7 @@ export default function HeaderSearchBar() {
         value={searchBarText}
         onChange={handleInputChange}
         onKeyDown={handleKeyPress}
-        placeholder={isDesktop ? "Новые горизонты?" : "?"}
+        placeholder={isDesktop ? 'Новые горизонты?' : '?'}
         className="w-[80%] h-[45%] max-w-[70%] pl-4 bg-accent-200 text-text-primary placeholder-text-secondary transition-[0.5s] hover:bg-accent-300 focus:bg-accent-400 outline-0"
       />
       {searchBarText == '' ? (

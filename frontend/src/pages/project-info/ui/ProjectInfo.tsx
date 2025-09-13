@@ -8,7 +8,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 export default function ProjectInfo() {
-  const isDesktop = useMediaQuery({ minWidth: 1024})
+  const isDesktop = useMediaQuery({ minWidth: 1024 })
   const [quote, setQuote] = useState({ quote: 'loading...', autor: '' })
 
   const quotesList = useMemo(
@@ -40,12 +40,12 @@ export default function ProjectInfo() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center bg-bg-primary">
-      {isDesktop && 
+      {isDesktop && (
         <div className="w-[100vw] flex flex-col justify-center items-center p-[5vw] bg-bg-card">
           <h1 className="text-3xl popins italic">{quote.quote}</h1>
           <p className="text-2xl popins">{quote.autor}</p>
         </div>
-      }
+      )}
       <div className="w-full flex flex-wrap justify-center p-5 gap-5 bg-bg-card">
         <div className="w-[30vw] min-w-75 flex flex-col items-center bg-bg-hover p-5 rounded-2xl select-none">
           <FaFireAlt className="w-15 h-15" />
@@ -89,7 +89,7 @@ export default function ProjectInfo() {
                 </div>
                 <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
                   <h1 className="w-[15vw] flex justify-center items-center p-1.5 rounded-t-2xl bg-orange-500">
-                  average
+                    average
                   </h1>
                   <p className="w-[15vw] h-[20vh] p-2 border border-orange-500">
                     Упражнения требующие времени на освоение.
@@ -103,36 +103,35 @@ export default function ProjectInfo() {
                     Упражнения которые требуют значитительной подготовки.
                   </p>
                 </div>
-              </div>) : (
-                <div className="w-full justify-center items-center gap-2">
-                  <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
-                    <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-green-500">
-                      beginner
-                    </h1>
-                    <p className="w-60 h-[20vh] border p-2 border-green-500">
-                      Упражнения к которым часто не требуется особая подготовка.
-                    </p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
-                    <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-orange-500">
-                    average
-                    </h1>
-                    <p className="w-60 h-[20vh] p-2 border border-orange-500">
-                      Упражнения требующие времени на освоение.
-                    </p>
-                  </div>
-                  <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
-                    <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-red-500">
-                      master
-                    </h1>
-                    <p className="w-60 h-[20vh] p-2 border border-red-500">
-                      Упражнения которые требуют значитительной подготовки.
-                    </p>
-                  </div>
+              </div>
+            ) : (
+              <div className="w-full justify-center items-center gap-2">
+                <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
+                  <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-green-500">
+                    beginner
+                  </h1>
+                  <p className="w-60 h-[20vh] border p-2 border-green-500">
+                    Упражнения к которым часто не требуется особая подготовка.
+                  </p>
                 </div>
-              )
-
-            }
+                <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
+                  <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-orange-500">
+                    average
+                  </h1>
+                  <p className="w-60 h-[20vh] p-2 border border-orange-500">
+                    Упражнения требующие времени на освоение.
+                  </p>
+                </div>
+                <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
+                  <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-red-500">
+                    master
+                  </h1>
+                  <p className="w-60 h-[20vh] p-2 border border-red-500">
+                    Упражнения которые требуют значитительной подготовки.
+                  </p>
+                </div>
+              </div>
+            )}
             <p className="w-[75%] text-2xl font-bold popins text-primary-400">
               Это не значит что одни упражнения лучше других, просто для одних упражнений требуется
               подготовка, для других нет.
