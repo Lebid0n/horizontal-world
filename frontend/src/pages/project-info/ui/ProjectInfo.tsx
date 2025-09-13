@@ -74,8 +74,8 @@ export default function ProjectInfo() {
             <p className="text-2xl font-bold popins text-primary-400">
               Все упражнения мы делим на категорий:
               <span className="text-green-500"> beginner</span> /{' '}
-              <span className="text-orange-500">average</span> /{' '}
-              <span className="text-red-500">master</span>
+              <span className="text-orange-500">intermediate</span> /{' '}
+              <span className="text-red-500">advanced</span>
             </p>
             {isDesktop ? (
               <div className="w-1/2 flex justify-center items-center gap-2">
@@ -89,7 +89,7 @@ export default function ProjectInfo() {
                 </div>
                 <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
                   <h1 className="w-[15vw] flex justify-center items-center p-1.5 rounded-t-2xl bg-orange-500">
-                    average
+                    intermediate
                   </h1>
                   <p className="w-[15vw] h-[20vh] p-2 border border-orange-500">
                     Упражнения требующие времени на освоение.
@@ -97,7 +97,7 @@ export default function ProjectInfo() {
                 </div>
                 <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
                   <h1 className="w-[15vw] flex justify-center items-center p-1.5 rounded-t-2xl bg-red-500">
-                    master
+                    advanced
                   </h1>
                   <p className="w-[15vw] h-[20vh] p-2 border border-red-500">
                     Упражнения которые требуют значитительной подготовки.
@@ -116,7 +116,7 @@ export default function ProjectInfo() {
                 </div>
                 <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
                   <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-orange-500">
-                    average
+                    intermediate
                   </h1>
                   <p className="w-60 h-[20vh] p-2 border border-orange-500">
                     Упражнения требующие времени на освоение.
@@ -124,7 +124,7 @@ export default function ProjectInfo() {
                 </div>
                 <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
                   <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-red-500">
-                    master
+                    advanced
                   </h1>
                   <p className="w-60 h-[20vh] p-2 border border-red-500">
                     Упражнения которые требуют значитительной подготовки.
