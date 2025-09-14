@@ -5,10 +5,8 @@ import { FaHandsHelping } from 'react-icons/fa'
 import { SiLevelsdotfyi } from 'react-icons/si'
 // react
 import { useEffect, useMemo, useState } from 'react'
-import { useMediaQuery } from 'react-responsive'
 
 export default function LandingInfo() {
-  const isDesktop = useMediaQuery({ minWidth: 1024 })
   const [quote, setQuote] = useState({ quote: 'loading...', autor: '' })
 
   const quotesList = useMemo(
@@ -40,103 +38,75 @@ export default function LandingInfo() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center bg-bg-primary">
-      {isDesktop && (
-        <div className="w-[100vw] flex flex-col justify-center items-center p-[5vw] bg-bg-card">
-          <h1 className="text-3xl popins italic">{quote.quote}</h1>
-          <p className="text-2xl popins">{quote.autor}</p>
-        </div>
-      )}
-      <div className="w-full flex flex-wrap justify-center p-5 gap-5 bg-bg-card">
-        <div className="w-[30vw] min-w-75 flex flex-col items-center bg-bg-hover p-5 rounded-2xl select-none">
-          <FaFireAlt className="w-15 h-15" />
-          <p className="text-2xl font-bold popins text-primary-400">
-            Уличные тренировки несут большую опасность, так как чаще всего вам неукого спросить
-            наставничества. Мы даём обширную базу упражнений и описания техник их выполнения.
-          </p>
-        </div>
-        <div className="w-[30vw] min-w-75 flex flex-col items-center bg-bg-hover p-5 rounded-2xl select-none">
-          <MdMoneyOff className="w-15 h-15" />
-          <p className="text-2xl font-bold popins text-primary-400">
-            Мы понимаем какого это упускать возможности из за отсутствия финансов, потому основной
-            функционал сайта полностью бесплатный.
-          </p>
-        </div>
-        <div className="w-[30vw] min-w-75 flex flex-col items-center bg-bg-hover p-5 rounded-2xl select-none">
-          <FaHandsHelping className="w-15 h-15" />
-          <p className="text-2xl font-bold popins text-primary-400">
-            Вы всегда можете помочь проекту, сообщяйте о багах, возможных улучшениях, или свяжитесь
-            с нами по поводу сотрудничества.
-          </p>
-        </div>
-        <div className="w-[92vw] min-w-75 flex flex-col items-center gap-2 bg-bg-hover p-5 rounded-2xl select-none">
-          <SiLevelsdotfyi className="w-15 h-15" />
-          <div className="flex flex-col justify-center items-center gap-2">
-            <p className="text-2xl font-bold popins text-primary-400">
-              Все упражнения мы делим на категорий:
-              <span className="text-green-500"> beginner</span> /{' '}
-              <span className="text-orange-500">intermediate</span> /{' '}
-              <span className="text-red-500">advanced</span>
-            </p>
-            {isDesktop ? (
-              <div className="w-1/2 flex justify-center items-center gap-2">
-                <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
-                  <h1 className="w-[15vw] flex justify-center items-center p-1.5 rounded-t-2xl bg-green-500">
-                    beginner
-                  </h1>
-                  <p className="w-[15vw] h-[20vh] border p-2 border-green-500">
-                    Упражнения к которым часто не требуется особая подготовка.
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
-                  <h1 className="w-[15vw] flex justify-center items-center p-1.5 rounded-t-2xl bg-orange-500">
-                    intermediate
-                  </h1>
-                  <p className="w-[15vw] h-[20vh] p-2 border border-orange-500">
-                    Упражнения требующие времени на освоение.
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
-                  <h1 className="w-[15vw] flex justify-center items-center p-1.5 rounded-t-2xl bg-red-500">
-                    advanced
-                  </h1>
-                  <p className="w-[15vw] h-[20vh] p-2 border border-red-500">
-                    Упражнения которые требуют значитительной подготовки.
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <div className="w-full justify-center items-center gap-2">
-                <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
-                  <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-green-500">
-                    beginner
-                  </h1>
-                  <p className="w-60 h-[20vh] border p-2 border-green-500">
-                    Упражнения к которым часто не требуется особая подготовка.
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
-                  <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-orange-500">
-                    intermediate
-                  </h1>
-                  <p className="w-60 h-[20vh] p-2 border border-orange-500">
-                    Упражнения требующие времени на освоение.
-                  </p>
-                </div>
-                <div className="flex flex-col justify-center items-center rounded-2xl text-2xl text-gray-50 p-4 popins font-bold">
-                  <h1 className="w-60 flex justify-center items-center p-1.5 rounded-t-2xl bg-red-500">
-                    advanced
-                  </h1>
-                  <p className="w-60 h-[20vh] p-2 border border-red-500">
-                    Упражнения которые требуют значитительной подготовки.
-                  </p>
-                </div>
-              </div>
-            )}
-            <p className="w-[75%] text-2xl font-bold popins text-primary-400">
-              Это не значит что одни упражнения лучше других, просто для одних упражнений требуется
-              подготовка, для других нет.
+      {/* Цитата для lg+ */}
+      <div className="hidden lg:flex w-full flex-col justify-center items-center p-8 xl:p-10 2xl:p-12 bg-bg-card">
+        <h1 className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl poppins italic text-center">
+          {quote.quote}
+        </h1>
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl poppins mt-2 text-center">
+          {quote.autor}
+        </p>
+      </div>
+
+      {/* Блоки с иконками */}
+      <div className="w-full flex flex-wrap justify-center p-4 sm:p-5 gap-4 sm:gap-5 bg-bg-card">
+        {/* Блоки */}
+        {[
+          {
+            Icon: FaFireAlt,
+            text: 'Уличные тренировки несут большую опасность, так как чаще всего вам некого спросить наставничества. Мы даём обширную базу упражнений и описания техник их выполнения.',
+          },
+          {
+            Icon: MdMoneyOff,
+            text: 'Мы понимаем, какого это упускать возможности из-за отсутствия финансов, поэтому основной функционал сайта полностью бесплатный.',
+          },
+          {
+            Icon: FaHandsHelping,
+            text: 'Вы всегда можете помочь проекту, сообщать о багах, возможных улучшениях или сотрудничать с нами.',
+          },
+        ].map((item, idx) => (
+          <div
+            key={idx}
+            className="w-full sm:w-[45%] lg:w-[30%] min-w-[18rem] flex flex-col items-center bg-bg-hover p-4 sm:p-5 rounded-2xl select-none"
+          >
+            <item.Icon className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-3 sm:mb-4" />
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold poppins text-accent-400 text-center">
+              {item.text}
             </p>
           </div>
+        ))}
+
+        {/* Четвёртый блок (категории) */}
+        <div className="w-full flex flex-col items-center gap-4 bg-bg-hover p-4 sm:p-5 rounded-2xl select-none">
+          <SiLevelsdotfyi className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-2" />
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold poppins text-accent-400 text-center">
+            Все упражнения мы делим на категории:{' '}
+            <span className="text-green-500">beginner</span> /{' '}
+            <span className="text-orange-500">intermediate</span> /{' '}
+            <span className="text-red-500">advanced</span>
+          </p>
+
+          {/* Категории */}
+          <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 w-full justify-center items-center">
+            {[
+              { name: 'beginner', color: 'green-500', desc: 'Упражнения к которым часто не требуется особая подготовка.' },
+              { name: 'intermediate', color: 'orange-500', desc: 'Упражнения требующие времени на освоение.' },
+              { name: 'advanced', color: 'red-500', desc: 'Упражнения которые требуют значительной подготовки.' },
+            ].map((cat) => (
+              <div key={cat.name} className="flex flex-col justify-center items-center rounded-2xl font-bold poppins text-gray-50 p-3 sm:p-4">
+                <h1 className={`w-60 sm:w-64 lg:w-[15rem] flex justify-center items-center p-1.5 rounded-t-2xl bg-${cat.color} text-sm sm:text-base md:text-lg lg:text-xl`}>
+                  {cat.name}
+                </h1>
+                <p className={`w-60 sm:w-64 lg:w-[15rem] h-fit p-2 border border-${cat.color} text-sm sm:text-base md:text-lg lg:text-xl text-accent-100 text-center`}>
+                  {cat.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="w-[90%] sm:w-[85%] lg:w-[75%] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold poppins text-accent-400 text-center mt-4">
+            Это не значит что одни упражнения лучше других, просто для одних упражнений требуется подготовка, для других нет.
+          </p>
         </div>
       </div>
     </div>
