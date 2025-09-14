@@ -7,7 +7,7 @@ import { SiLevelsdotfyi } from 'react-icons/si'
 import { useEffect, useMemo, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-export default function ProjectInfo() {
+export default function LandingInfo() {
   const isDesktop = useMediaQuery({ minWidth: 1024 })
   const [quote, setQuote] = useState({ quote: 'loading...', autor: '' })
 
