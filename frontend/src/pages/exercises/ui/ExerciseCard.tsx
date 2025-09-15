@@ -30,18 +30,23 @@ export default function ExerciseCard({ exercise, type }: Props) {
   return (
     <article
       className={clsx(
-        'flex flex-col min-w-[20rem] items-center grow  rounded-2xl p-3 duration-200',
+        'flex flex-col relative min-w-[20rem] items-center grow  rounded-2xl p-3 duration-200',
         {
-          'max-w-[50rem]': type === 'modal',
-          'hover:bg-primary-50 cursor-pointer': type === 'card',
+          'max-w-[50rem] bg-bg-card': type === 'modal',
+          'hover:bg-bg-hover cursor-pointer': type === 'card',
           'border-2 border-accent': type === 'modal' || type === 'card',
         }
       )}
       onClick={handleClick}
       ref={ref}
     >
+      <h2 className="absolute top-0 left-2 text-lg font-bold">{exercise.difficulty}</h2>
       <h2 className="text-xl font-bold">{exercise.name}</h2>
-      <img src={exercise.imageUrl} alt={exercise.name} />
+      <img
+        src={exercise.imageUrl}
+        alt={exercise.name}
+        className="max-w-[40rem] h-full rounded-2xl my-2 object-cover"
+      />
       <p className="text-lg">{exercise.description}</p>
     </article>
   )

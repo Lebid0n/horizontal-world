@@ -7,7 +7,7 @@ const fallbackExercises: Exercise[] = [
     slug: 'push-up',
     description: 'A classic bodyweight exercise for chest and arms.',
     difficulty: 'Beginner',
-    imageUrl: '/images/fallback/push-up.jpg',
+    imageUrl: 'https://www.muscletech.in/wp-content/uploads/2025/01/push-up-exercises.webp',
     videoUrl: 'https://www.youtube.com/watch?v=8-0-o0a1-8g',
   },
   {

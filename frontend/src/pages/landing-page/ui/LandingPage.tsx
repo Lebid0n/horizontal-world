@@ -1,4 +1,4 @@
-import LandingInfo from './Landing'
+import LandingInfo from './LandingInfo'
 
 export default function LandingPage() {
   return (

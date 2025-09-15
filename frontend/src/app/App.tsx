@@ -4,7 +4,7 @@ import ExercisesPage from '@/pages/exercises/ui/ExercisesPage'
 import UserProfilePage from '@/pages/user-profile/ui/UserProfilePage'
 import ExerciseModal from '@/pages/exercises/ui/ExerciseModal'
 import ExercisePage from '@/pages/exercises/ui/ExercisePage'
-import LandingPage from '../pages/landing/ui/LandingInfo'
+import LandingPage from '@/pages/landing-page/ui/LandingPage'
 
 export default function App() {
   const location = useLocation()
