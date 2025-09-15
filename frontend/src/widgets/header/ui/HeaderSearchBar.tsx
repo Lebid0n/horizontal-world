@@ -43,7 +43,7 @@ export default function HeaderSearchBar() {
                      bg-accent-200 transition-colors duration-300 
                      hover:bg-accent-300 disabled:cursor-not-allowed"
         >
-          <IoSearch className='w-10 h-10 2xl:w-13 2xl:h-13' />
+          <IoSearch className="w-10 h-10 2xl:w-13 2xl:h-13" />
         </button>
 
         {/* Поле ввода */}
@@ -72,7 +72,7 @@ export default function HeaderSearchBar() {
             className="w-[15%] max-w-20 h-15 2xl:h-20 flex justify-center items-center rounded-r-4xl 
                        bg-accent-200 transition-colors duration-300 hover:bg-accent-400"
           >
-            <RxCross1 className='w-10 h-10 2xl:w-13 2xl:h-13'  />
+            <RxCross1 className="w-10 h-10 2xl:w-13 2xl:h-13" />
           </button>
         )}
       </div>

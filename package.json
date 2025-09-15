@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "check:frontend": "cd frontend && npm run lint && npm run frmt:check",
-    "check:backend": "cd backend && npm run lint && npm run frmt:check",
+    "check:frontend": "cd frontend && npm run lint && npm run frmt",
+    "check:backend": "cd backend && npm run lint && npm run frmt",
     "check:all": "npm run check:frontend && npm run check:backend"
   },
   "repository": {

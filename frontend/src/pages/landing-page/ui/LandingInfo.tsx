@@ -80,8 +80,7 @@ export default function LandingInfo() {
         <div className="w-full flex flex-col items-center gap-4 bg-bg-hover p-4 sm:p-5 rounded-2xl select-none">
           <SiLevelsdotfyi className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 mb-2" />
           <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold poppins text-accent-400 text-center">
-            Все упражнения мы делим на категории:{' '}
-            <span className="text-green-500">beginner</span> /{' '}
+            Все упражнения мы делим на категории: <span className="text-green-500">beginner</span> /{' '}
             <span className="text-orange-500">intermediate</span> /{' '}
             <span className="text-red-500">advanced</span>
           </p>
@@ -89,15 +88,34 @@ export default function LandingInfo() {
           {/* Категории */}
           <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 w-full justify-center items-center">
             {[
-              { name: 'beginner', color: 'green-500', desc: 'Упражнения к которым часто не требуется особая подготовка.' },
-              { name: 'intermediate', color: 'orange-500', desc: 'Упражнения требующие времени на освоение.' },
-              { name: 'advanced', color: 'red-500', desc: 'Упражнения которые требуют значительной подготовки.' },
+              {
+                name: 'beginner',
+                color: 'green-500',
+                desc: 'Упражнения к которым часто не требуется особая подготовка.',
+              },
+              {
+                name: 'intermediate',
+                color: 'orange-500',
+                desc: 'Упражнения требующие времени на освоение.',
+              },
+              {
+                name: 'advanced',
+                color: 'red-500',
+                desc: 'Упражнения которые требуют значительной подготовки.',
+              },
             ].map((cat) => (
-              <div key={cat.name} className="flex flex-col justify-center items-center rounded-2xl font-bold poppins text-gray-50 p-3 sm:p-4">
-                <h1 className={`w-60 sm:w-64 lg:w-[15rem] flex justify-center items-center p-1.5 rounded-t-2xl bg-${cat.color} text-sm sm:text-base md:text-lg lg:text-xl`}>
+              <div
+                key={cat.name}
+                className="flex flex-col justify-center items-center rounded-2xl font-bold poppins text-gray-50 p-3 sm:p-4"
+              >
+                <h1
+                  className={`w-60 sm:w-64 lg:w-[15rem] flex justify-center items-center p-1.5 rounded-t-2xl bg-${cat.color} text-sm sm:text-base md:text-lg lg:text-xl`}
+                >
                   {cat.name}
                 </h1>
-                <p className={`w-60 sm:w-64 lg:w-[15rem] h-fit p-2 border border-${cat.color} text-sm sm:text-base md:text-lg lg:text-xl text-accent-100 text-center`}>
+                <p
+                  className={`w-60 sm:w-64 lg:w-[15rem] h-fit p-2 border border-${cat.color} text-sm sm:text-base md:text-lg lg:text-xl text-accent-100 text-center`}
+                >
                   {cat.desc}
                 </p>
               </div>
@@ -105,7 +123,8 @@ export default function LandingInfo() {
           </div>
 
           <p className="w-[90%] sm:w-[85%] lg:w-[75%] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold poppins text-accent-400 text-center mt-4">
-            Это не значит что одни упражнения лучше других, просто для одних упражнений требуется подготовка, для других нет.
+            Это не значит что одни упражнения лучше других, просто для одних упражнений требуется
+            подготовка, для других нет.
           </p>
         </div>
       </div>

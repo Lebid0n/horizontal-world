@@ -24,20 +24,20 @@ export default function Header() {
       {/* Десктопное меню */}
       <div className="hidden lg:flex w-[30%] justify-center items-center gap-4 bg-bg-tertiary">
         <button className="w-15 2xl:w-20 aspect-square flex justify-center items-center rounded-full bg-accent-200 transition-[0.5s] hover:bg-accent-300 cursor-pointer">
-          <TiHome className='w-10 h-10 2xl:w-13 2xl:h-13' />
+          <TiHome className="w-10 h-10 2xl:w-13 2xl:h-13" />
         </button>
         <button className="w-15 2xl:w-20 aspect-square flex justify-center items-center rounded-full bg-accent-200 transition-[0.5s] hover:bg-accent-300 cursor-pointer">
-          <HiTranslate className='w-10 h-10 2xl:w-13 2xl:h-13' />
+          <HiTranslate className="w-10 h-10 2xl:w-13 2xl:h-13" />
         </button>
         <button className="w-15 2xl:w-20 aspect-square flex justify-center items-center rounded-full bg-accent-200 transition-[0.5s] hover:bg-accent-300 cursor-pointer">
-          <PiUserCircleDuotone className='w-15 h-15 2xl:w-20 2xl:h-20' />
+          <PiUserCircleDuotone className="w-15 h-15 2xl:w-20 2xl:h-20" />
         </button>
       </div>
 
       {/* Мобильное меню */}
       <div className="flex lg:hidden w-30 h-full justify-center items-center bg-bg-tertiary">
         <button className="w-15 aspect-square flex justify-center items-center rounded-full bg-accent-200">
-          <IoMenu className='w-10 h-10 2xl:w-13 2xl:h-13' />
+          <IoMenu className="w-10 h-10 2xl:w-13 2xl:h-13" />
         </button>
       </div>
     </header>
