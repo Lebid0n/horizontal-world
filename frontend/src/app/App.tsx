@@ -1,10 +1,10 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
-import ProjectInfoPage from '../pages/project-info/ui/ProjectInfoPage'
 import Layout from '@/shared/layout/Layout'
 import ExercisesPage from '@/pages/exercises/ui/ExercisesPage'
 import UserProfilePage from '@/pages/user-profile/ui/UserProfilePage'
 import ExerciseModal from '@/pages/exercises/ui/ExerciseModal'
 import ExercisePage from '@/pages/exercises/ui/ExercisePage'
+import LandingPage from '../pages/landing/ui/LandingInfo'
 
 export default function App() {
   const location = useLocation()
@@ -15,7 +15,7 @@ export default function App() {
     <>
       <Routes location={previousLocation || location}>
         <Route path="/" element={<Layout />}>
-          <Route index element={<ProjectInfoPage />} />
+          <Route index element={<LandingPage />} />
           <Route path="/exercises" element={<ExercisesPage />} />
           <Route path="/profile/:id" element={<UserProfilePage />} />
           {!previousLocation && <Route path="/exercises/:slug" element={<ExercisePage />} />}
