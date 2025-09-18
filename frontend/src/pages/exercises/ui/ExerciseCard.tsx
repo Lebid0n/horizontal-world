@@ -45,7 +45,7 @@ export default function ExerciseCard({ exercise, type }: Props) {
       <img
         src={exercise.imageUrl}
         alt={exercise.name}
-        className="max-w-[40rem] h-full rounded-2xl my-2 object-cover"
+        className="w-full max-w-[40rem] max-h-[25rem] rounded-2xl my-2 object-cover"
       />
       <p className="text-lg">{exercise.description}</p>
     </article>
