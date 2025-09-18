@@ -1,9 +1,19 @@
+import { useTranslation } from '@/shared/lib/hooks/i18n'
 import fallbackExercises from '../lib/fallback-exercises'
 import ExerciseCard from './ExerciseCard'
 
 export default function ExercisesPage() {
+  const { t } = useTranslation()
+
   const exercises = fallbackExercises.map((exercise, idx) => {
-    return <ExerciseCard key={idx} exercise={exercise} type={'card'} />
+    const translatedExercise = {
+      ...exercise,
+      name: t(exercise.name),
+      description: t(exercise.description),
+      difficulty: t(exercise.difficulty),
+    }
+
+    return <ExerciseCard key={idx} exercise={translatedExercise} type={'card'} />
   })
 
   return (

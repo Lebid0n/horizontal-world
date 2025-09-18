@@ -5,8 +5,16 @@ import { IoMenu } from 'react-icons/io5'
 import { TiHome } from 'react-icons/ti'
 import { HiTranslate } from 'react-icons/hi'
 import { PiUserCircleDuotone } from 'react-icons/pi'
+import { useLanguage } from '@/shared/lib/hooks/i18n'
 
 export default function Header() {
+  const { language, changeLanguage } = useLanguage()
+
+  const handleLanguageChange = () => {
+    const otherLanguage = language === 'en' ? 'ru' : 'en'
+    changeLanguage(otherLanguage)
+  }
+
   return (
     <header className="w-full h-[15vh] flex bg-bg-tertiary items-center p-5 gap-5">
       {/* Логотип — только десктоп */}
@@ -26,7 +34,10 @@ export default function Header() {
         <button className="w-15 2xl:w-20 aspect-square flex justify-center items-center rounded-full bg-accent-200 transition-[0.5s] hover:bg-accent-300 cursor-pointer">
           <TiHome className="w-10 h-10 2xl:w-13 2xl:h-13" />
         </button>
-        <button className="w-15 2xl:w-20 aspect-square flex justify-center items-center rounded-full bg-accent-200 transition-[0.5s] hover:bg-accent-300 cursor-pointer">
+        <button
+          className="w-15 2xl:w-20 aspect-square flex justify-center items-center rounded-full bg-accent-200 transition-[0.5s] hover:bg-accent-300 cursor-pointer"
+          onClick={handleLanguageChange}
+        >
           <HiTranslate className="w-10 h-10 2xl:w-13 2xl:h-13" />
         </button>
         <button className="w-15 2xl:w-20 aspect-square flex justify-center items-center rounded-full bg-accent-200 transition-[0.5s] hover:bg-accent-300 cursor-pointer">

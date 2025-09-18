@@ -4,6 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 
 import enShared from '@/shared/lib/i18n/en.json'
 import ruShared from '@/shared/lib/i18n/ru.json'
+import { exercisesTranslations } from '@/pages/exercises/lib/i18n'
 
 export const i18nConfig = {
   debug: import.meta.env.DEV,
@@ -15,11 +16,13 @@ export const i18nConfig = {
     en: {
       translation: {
         ...enShared,
+        ...exercisesTranslations.en,
       },
     },
     ru: {
       translation: {
         ...ruShared,
+        ...exercisesTranslations.ru,
       },
     },
   },

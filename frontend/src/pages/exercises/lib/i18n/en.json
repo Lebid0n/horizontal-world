@@ -1,0 +1,20 @@
+{
+  "exercises": {
+    "pageTitle": "Exercises",
+    "pushUp": {
+      "name": "Push-up",
+      "description": "A classic bodyweight exercise for chest and arms."
+    },
+    "bodyweightSquat": {
+      "name": "Bodyweight Squat",
+      "description": "A fundamental lower body exercise."
+    },
+    "invertedRow": {
+      "name": "Inverted Row",
+      "description": "Excellent for back and bicep strength."
+    },
+    "difficulty": {
+      "beginner": "Beginner"
+    }
+  }
+}
